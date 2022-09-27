@@ -1,4 +1,4 @@
-package pe.ineapp.ineapppersonaservice.Persona;
+package pe.ineapp.ineapppersonaservice.Person;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,13 +11,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/person")
 public class PersonController {
-
+//PREGUNTA 4
     @GetMapping
-    @RequestMapping("/getALL")
+    @RequestMapping("/get2Alumnos")
     public List<Person> getAll(){
 
         //Person persona = new Person("Eduardo");
         LocalDate date = LocalDate.of(2004, Month.JANUARY, 3);
+        LocalDate date2 = LocalDate.of(2004, Month.MARCH, 7);
+        LocalDate date3 = LocalDate.of(1999, Month.APRIL, 7);
 
         Person person = Person.builder()
                 .id(1L)
@@ -27,7 +29,24 @@ public class PersonController {
                 .email("carlos@gmail.com")
                 .birthDate(date).build();
 
-        return List.of(person) ;
+        Person person2 = Person.builder()
+                .id(2L)
+                .name("Giulliano")
+                .lastName("Cuentas")
+                .dni("73745644")
+                .email("giulliano@gmail.com")
+                .birthDate(date2).build();
+
+        Person person3 = Person.builder()
+                .id(3L)
+                .name("Alejandro")
+                .lastName("Monzon")
+                .dni("32165498")
+                .email("ale@gmail.com")
+                .birthDate(date3).build();
+
+
+        return List.of(person,person2,person3) ;
 
     }
 
