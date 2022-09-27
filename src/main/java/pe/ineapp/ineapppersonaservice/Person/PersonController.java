@@ -13,7 +13,7 @@ import java.util.List;
 public class PersonController {
 //PREGUNTA 4
     @GetMapping
-    @RequestMapping("/get2Alumnos")
+    @RequestMapping("/getAlumnos")
     public List<Person> getAll(){
 
         //Person persona = new Person("Eduardo");
@@ -50,7 +50,7 @@ public class PersonController {
 
     }
 
-    @RequestMapping("/getByid")
+/*    @RequestMapping("/getByid")
     public Person getByid(){
         LocalDate date = LocalDate.of(2004, Month.JANUARY, 3);
 
@@ -64,7 +64,7 @@ public class PersonController {
 
         return person;
     }
-
+*/
     //PUT
 
 
